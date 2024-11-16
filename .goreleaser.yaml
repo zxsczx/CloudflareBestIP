@@ -166,7 +166,7 @@ release:
 
     Released in {{ .CommitDate }}
 
-    > {{ if .Env.USE_EMOJI_TITLE }}✨ New Features (新功能){{ else }}New Features{{ end }}
+    > {{ .Env.USE_EMOJI_TITLE }}
 
   footer: |
     **Full Changelog**: https://github.com/sinspired/ip-scanner/compare/{{ .PreviousTag }}...{{ if .IsNightly }}nightly{{ else }}{{ .Tag }}{{ end }}
