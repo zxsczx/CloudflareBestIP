@@ -69,10 +69,7 @@ changelog:
     # - title: "New Features" # “新功能”
     # - title: "✨ New Features (新功能)"
 
-    - title: |
-        {{ .Env.USE_EMOJI_TITLE }}
-
-
+    - title: "{{ if .Env.USE_EMOJI_TITLE }}✨ New Features (新功能){{ else }}New Features{{ end }}"
       regexp: '^(?i).*?(feat|功能|新增|feature|新特性)(\(.+\))??!?[-:\s].+$'
       order: 100
 
@@ -168,6 +165,8 @@ release:
     > {{.TagContents}}
 
     Released in {{ .CommitDate }}
+
+    > {{ if .Env.USE_EMOJI_TITLE }}✨ New Features (新功能){{ else }}New Features{{ end }}
 
   footer: |
     **Full Changelog**: https://github.com/sinspired/ip-scanner/compare/{{ .PreviousTag }}...{{ if .IsNightly }}nightly{{ else }}{{ .Tag }}{{ end }}
