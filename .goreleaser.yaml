@@ -68,8 +68,8 @@ changelog:
     # feat(UI): 新增用户登录界面、新增: 实现用户认证功能。
     # - title: "New Features" # “新功能”
     # - title: "✨ New Features (新功能)"
-    
-    - title: "{{ if .Env.USE_EMOJI }}✨ New Features (新功能){{ else }}New Features{{ end }}"
+
+    - title: "{{ if .Env.USE_EMOJI_TITLE }}✨ New Features (新功能){{ else }}New Features{{ end }}"
       regexp: '^(?i).*?(feat|功能|新增|feature|新特性)(\(.+\))??!?[-:\s].+$'
       order: 100
 
@@ -77,7 +77,7 @@ changelog:
     # fix: 修复UI组件加载延迟问题
     # - title: "Bug fixes" # “Bug 修复”
     # - title: "🐛 Bug Fixes (修复问题)"
-    - title: "{{ if .Env.USE_EMOJI }}🐛 Bug Fixes (修复问题){{ else }}Bug fixes{{ end }}"
+    - title: "{{ if .Env.USE_EMOJI_TITLE }}🐛 Bug Fixes (修复问题){{ else }}Bug fixes{{ end }}"
       regexp: '^(?i).*?(fix|修复|bug|错误|bugfix)(\(.+\))??!?[-:\s].+$'
       order: 200
 
