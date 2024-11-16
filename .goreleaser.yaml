@@ -68,6 +68,7 @@ changelog:
     # feat(UI): 新增用户登录界面、新增: 实现用户认证功能。
     # - title: "New Features" # “新功能”
     # - title: "✨ New Features (新功能)"
+    
     - title: "{{ if .Env.USE_EMOJI }}✨ New Features (新功能){{ else }}New Features{{ end }}"
       regexp: '^(?i).*?(feat|功能|新增|feature|新特性)(\(.+\))??!?[-:\s].+$'
       order: 100
