@@ -70,11 +70,8 @@ changelog:
     # - title: "✨ New Features (新功能)"
 
     - title: |
-        {{ if .Env.USE_EMOJI_TITLE }}
-        ✨ New Features (新功能)
-        {{ else }}
-        New Features
-        {{ end }}
+        {{ .Env.USE_EMOJI_TITLE }}
+
 
       regexp: '^(?i).*?(feat|功能|新增|feature|新特性)(\(.+\))??!?[-:\s].+$'
       order: 100
